@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-southeast-1:156962844638:task-definition/package-delivery-service-varshith:3"
+        LoadBalancerInfo:
+          ContainerName: "package-delivery-service-varshith"
+          ContainerPort: "8083"
+        PlatformVersion: "LATEST"
